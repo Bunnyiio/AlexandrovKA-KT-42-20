@@ -3,6 +3,7 @@ using _1laba.Database;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using static _1laba.ServiceExtensions.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,7 @@ builder.Services.AddSwaggerGen();
     builder.Services.AddDbContext<StudentDbContext>(options =>
            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-    //builder.Services.AddServices();
+    builder.Services.AddServices();
 
     var app = builder.Build();
 

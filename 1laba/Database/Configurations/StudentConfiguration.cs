@@ -44,16 +44,10 @@ namespace _1laba.Database.Configurations
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Фамилия студента");
 
-            //MiddleName
-            builder
-                .Property(p => p.LastName).IsRequired()
-                .HasColumnName("c_student_middlename")
-                .HasColumnType(ColumnType.String).HasMaxLength(100)
-                .HasComment("Отчество студента");
 
             //MiddleName
             builder
-                .Property(p => p.LastName).IsRequired()
+                .Property(p => p.MiddleName).IsRequired()
                 .HasColumnName("c_student_middlename")
                 .HasColumnType(ColumnType.String).HasMaxLength(100)
                 .HasComment("Отчество студента");

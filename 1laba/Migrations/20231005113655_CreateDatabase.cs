@@ -31,8 +31,8 @@ namespace _1laba.Migrations
                     student_id = table.Column<int>(type: "integer", nullable: false, comment: "Идентификатор записи студента")
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     c_student_firstname = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Имя студента"),
+                    c_student_lastname = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Фамилия студента"),
                     c_student_middlename = table.Column<string>(type: "varchar", maxLength: 100, nullable: false, comment: "Отчество студента"),
-                    MiddleName = table.Column<string>(type: "text", nullable: false),
                     f_student_groupid = table.Column<int>(type: "int4", nullable: false, comment: "Идентификатор группы")
                 },
                 constraints: table =>

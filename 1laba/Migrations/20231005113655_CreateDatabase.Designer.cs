@@ -11,7 +11,7 @@ using _1laba.Database;
 namespace _1laba.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20230928162741_CreateDatabase")]
+    [Migration("20231005113655_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -73,12 +73,15 @@ namespace _1laba.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar")
-                        .HasColumnName("c_student_middlename")
-                        .HasComment("Отчество студента");
+                        .HasColumnName("c_student_lastname")
+                        .HasComment("Фамилия студента");
 
                     b.Property<string>("MiddleName")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar")
+                        .HasColumnName("c_student_middlename")
+                        .HasComment("Отчество студента");
 
                     b.HasKey("StudentId")
                         .HasName("pk_cd_student_student_id");

@@ -70,12 +70,15 @@ namespace _1laba.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar")
-                        .HasColumnName("c_student_middlename")
-                        .HasComment("Отчество студента");
+                        .HasColumnName("c_student_lastname")
+                        .HasComment("Фамилия студента");
 
                     b.Property<string>("MiddleName")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar")
+                        .HasColumnName("c_student_middlename")
+                        .HasComment("Отчество студента");
 
                     b.HasKey("StudentId")
                         .HasName("pk_cd_student_student_id");
