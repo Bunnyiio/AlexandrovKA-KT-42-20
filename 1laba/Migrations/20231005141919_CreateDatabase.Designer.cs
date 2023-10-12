@@ -11,7 +11,7 @@ using _1laba.Database;
 namespace _1laba.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20231005113655_CreateDatabase")]
+    [Migration("20231005141919_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
